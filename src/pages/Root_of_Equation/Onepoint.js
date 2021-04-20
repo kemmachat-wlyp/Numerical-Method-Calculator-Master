@@ -121,7 +121,7 @@ class Onepoint extends Component {
                     onChange={this.handleChange}
                     style={{
                         padding: '50px',
-                        background: "#1b1b1b",
+                        background: "#",
                         width: '100%',
                     }}
                 >

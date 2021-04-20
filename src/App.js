@@ -79,7 +79,7 @@ class App extends Component {
             <div className="headertext"
               style={{ marginTop: "40px" }}
             >
-              <h2 style={{ marginLeft: "45%"}}> Numerical_Method </h2>
+              <h2 style={{ marginLeft: "45%" }}> Numerical_Method </h2>
             </div>
           </Header>
           <Layout style={{ minHeight: "100vh" }}>
@@ -105,6 +105,7 @@ class App extends Component {
                   <Menu.Item key="menu_newton">Newton-Raphson <Link to="/Newton_raphson" /></Menu.Item>
                   <Menu.Item key="menu_secant">Secant Method <Link to="/Secant" /></Menu.Item>
                 </SubMenu>
+
 
               </Menu>
             </Sider>

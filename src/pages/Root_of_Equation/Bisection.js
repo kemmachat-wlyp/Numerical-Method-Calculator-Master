@@ -160,7 +160,7 @@ class Bisec extends Component {
                     onChange={this.handleChange}
                     style={{
                         padding: '50px',
-                        background: "#1b1b1b",
+                        background: "#",
                         width: '100%',
                     }}
                 >
@@ -168,6 +168,7 @@ class Bisec extends Component {
                         style={{
                             width: 500,
                             color: "#ffffff",
+                            background: "#"
 
                         }}
                     >
