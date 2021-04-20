@@ -1,0 +1,1 @@
+{"_id":{"$oid":"5e7a4dc544740a066c65a45f"},"fx":"e^(-2x)+sin(3x)","xs":{"$numberInt":"1"},"xf":{"$numberInt":"3"},"__v":{"$numberInt":"0"}}
