@@ -48,7 +48,7 @@ import Backward_Divided_Differences2 from './pages/Differentiation/Backward_Divi
 import Central_Divided_Differences2 from './pages/Differentiation/Central_Divided_Differences2';
 import Forward_Divided_Differences2 from './pages/Differentiation/Forward_Divided_Differences2';
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Content, Sider } = Layout;
 
 const { SubMenu } = Menu;
 
@@ -106,6 +106,19 @@ class App extends Component {
                   <Menu.Item key="menu_secant">Secant Method <Link to="/Secant" /></Menu.Item>
                 </SubMenu>
 
+                <SubMenu
+                  key="sub1"
+                  title={
+                    <span>
+                      <Icon type="calculator" />
+                      <span>Interpolation</span>
+                    </span>
+                  }
+                >
+                  {/*<Menu.Item key="menu_graphical">Graphical <Link to="/Bisection" /></Menu.Item>*/}
+                  <Menu.Item key="Newton_Divide_Difference">Newton_Divide_Difference <Link to="/Newton_Divide_Difference" /> </Menu.Item>
+                </SubMenu>
+
 
               </Menu>
             </Sider>
@@ -153,7 +166,6 @@ class App extends Component {
                 <Route path="/Central_Divided_Differences2" component={Central_Divided_Differences2} />
                 <Route path="/Forward_Divided_Differences2" component={Forward_Divided_Differences2} />
               </Content>
-
             </Layout>
           </Layout>
         </Layout>
