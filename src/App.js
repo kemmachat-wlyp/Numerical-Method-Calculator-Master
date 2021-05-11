@@ -93,7 +93,7 @@ class App extends Component {
                   key="sub1"
                   title={
                     <span>
-                      <Icon type="calculator" />
+                      <Icon type="setting" />
                       <span>Root of Equation</span>
                     </span>
                   }
@@ -110,7 +110,7 @@ class App extends Component {
                   key="sub1"
                   title={
                     <span>
-                      <Icon type="calculator" />
+                      <Icon type="setting" />
                       <span>Interpolation</span>
                     </span>
                   }
