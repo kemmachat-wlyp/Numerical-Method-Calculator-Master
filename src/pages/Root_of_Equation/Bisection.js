@@ -61,12 +61,11 @@ class Bisec extends Component {
     }
     
     API = async () => {
-        var response = await axios.get('http://localhost:3001/api/users/showbisectionmodel').then(res => { return res.data })
+        var response = await axios.get('http://localhost:3001/Bisection').then(res => { return res.data })
         this.setState({
-            fx: response['data'][0]['fx'],
-            xl: response['data'][0]['xl'],
-            xr: response['data'][0]['xr'],
-
+            fx: response['Bisection']['fx'],
+            xl: response['Bisection']['xl'],
+            xr: response['Bisection']['xr'],
         }); 
         alert(
             "Fx : "+ this.state.fx+"    "+

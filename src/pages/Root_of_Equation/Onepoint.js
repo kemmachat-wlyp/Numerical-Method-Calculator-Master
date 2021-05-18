@@ -50,10 +50,10 @@ class Onepoint extends Component {
         this.onepoint = this.onepoint.bind(this);
     }
     API = async () => {
-        var response = await axios.get('http://localhost:3001/api/users/showOnepoint').then(res => { return res.data })
+        var response = await axios.get('http://localhost:3001/Onepoint').then(res => { return res.data })
         this.setState({
-            fx: response['data'][0]['fx'],
-            x0: response['data'][0]['x0'],
+            fx: response['Onepoint']['fx'],
+            x0: response['Onepoint']['x0'],
         });
         alert(
             "Fx : "+ this.state.fx+"    "+

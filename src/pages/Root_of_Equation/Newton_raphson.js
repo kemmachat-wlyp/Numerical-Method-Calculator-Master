@@ -46,12 +46,13 @@ class Newton_raphson extends Component {
         this.newton_raphson = this.newton_raphson.bind(this);
     }
     API = async () => {
-        var response = await axios.get('http://localhost:3001/api/users/showNewton_raphson').then(res => { return res.data })
+        var response = await axios.get('http://localhost:3001/Newton_raphson').then(res => { return res.data })
         this.setState({
-            fx: response['data'][0]['fx'],
-            x0: response['data'][0]['x0'],
+            fx: response['Newton_raphson']['fx'],
+            x0: response['Newton_raphson']['x0'],
         });
         alert(
+            // response['Newton_raphson']['x0']
             "Fx : "+ this.state.fx+"    "+
             "XS : "+ this.state.x0+"    "
         );

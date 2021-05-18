@@ -58,11 +58,11 @@ class False_position extends Component {
         this.false_position = this.false_position.bind(this);
     }
     API = async () => {
-        var response = await axios.get('http://localhost:3001/api/users/showFalse_position').then(res => { return res.data })
+        var response = await axios.get('http://localhost:3001/False_position').then(res => { return res.data })
         this.setState({
-            fx: response['data'][0]['fx'],
-            xl: response['data'][0]['xl'],
-            xr: response['data'][0]['xr'],
+            fx: response['False_position']['fx'],
+            xl: response['False_position']['xl'],
+            xr: response['False_position']['xr'],
 
         });
         alert(

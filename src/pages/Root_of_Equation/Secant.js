@@ -49,11 +49,11 @@ class Secant extends Component {
         this.secant = this.secant.bind(this);
     }
     API = async () => {
-        var response = await axios.get('http://localhost:3001/api/users/showSecant').then(res => { return res.data })
+        var response = await axios.get('http://localhost:3001/Secant').then(res => { return res.data })
         this.setState({
-            fx: response['data'][0]['fx'],
-            x0: response['data'][0]['xs'],
-            x1: response['data'][0]['xf'],
+            fx: response['Secant']['fx'],
+            x0: response['Secant']['x0'],
+            x1: response['Secant']['x1'],
         });
         alert(
             "Fx : "+ this.state.fx+"    "+
