@@ -4,7 +4,7 @@ import 'antd/dist/antd.css';
 import { Layout, Menu, Icon } from 'antd';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-import './style/style.scss'
+import './style/style.css'
 
 //link_pages
 //Integration
@@ -47,6 +47,8 @@ import Forward_Divided_Differences from './pages/Differentiation/Forward_Divided
 import Backward_Divided_Differences2 from './pages/Differentiation/Backward_Divided_Differences2';
 import Central_Divided_Differences2 from './pages/Differentiation/Central_Divided_Differences2';
 import Forward_Divided_Differences2 from './pages/Differentiation/Forward_Divided_Differences2';
+
+import Swagger from './API/swagger'
 
 const { Header, Content, Sider } = Layout;
 
@@ -107,17 +109,43 @@ class App extends Component {
                 </SubMenu>
 
                 <SubMenu
-                  key="sub1"
+                  key="sub2"
                   title={
                     <span>
                       <Icon type="setting" />
-                      <span>Interpolation</span>
+                      <span>Linear Algebra</span>
+                    </span>
+                  }
+                >                  
+                  <Menu.Item key="menu_cramer">Cramer's Rule <Link to="/cramer" /> </Menu.Item>
+                </SubMenu>
+
+                <SubMenu
+                  key="sub3"
+                  title={
+                    <span>
+                      <Icon type="setting" />
+                      <span>Regression</span>
+                    </span>
+                  }
+                >                  
+                  <Menu.Item key="menu_cramer">Linear Regression<Link to="/Linear_Regression" /> </Menu.Item>
+                </SubMenu>
+
+                <SubMenu
+                  key="sub4"
+                  title={
+                    <span>
+                      <Icon type="setting" />
+                      <span>Swagger</span>
                     </span>
                   }
                 >
                   {/*<Menu.Item key="menu_graphical">Graphical <Link to="/Bisection" /></Menu.Item>*/}
-                  <Menu.Item key="Newton_Divide_Difference">Newton_Divide_Difference <Link to="/Newton_Divide_Difference" /> </Menu.Item>
+                  <Menu.Item key="menu_swagger"><Link to='/Swagger'>Swagger</Link></Menu.Item>
                 </SubMenu>
+
+                
 
 
               </Menu>
@@ -165,6 +193,7 @@ class App extends Component {
                 <Route path="/Backward_Divided_Differences2" component={Backward_Divided_Differences2} />
                 <Route path="/Central_Divided_Differences2" component={Central_Divided_Differences2} />
                 <Route path="/Forward_Divided_Differences2" component={Forward_Divided_Differences2} />
+                <Route path='/Swagger' component={Swagger}></Route>
               </Content>
             </Layout>
           </Layout>

@@ -7,22 +7,22 @@ const API = {
     xr: '20'
   },
   False_position:{
-    fx: '10',
-    xl: '10',
-    xr: '10'
+    fx: '43x-1',
+    xl: '0.02',
+    xr: '0.03'
   },
   Newton_raphson:{
-    fx: '10',
-    x0: '10'
+    fx: 'x^3-7x^2+8x-3',
+    x0: '5'
   },
   Onepoint:{
-    fx: '10',
-    x0: '10'
+    fx: 'x^5-3x^3+1',
+    x0: '0'
   },
   Secant:{
-    fx: '10',
-    x0: '10',
-    x1: '10'
+    fx: 'e^(-2x)+sin(3x)',
+    x0: '1',
+    x1: '3'
   }
 }
 
@@ -59,5 +59,5 @@ app.get('/Secant', (req, res) => {
 
 
 app.listen(3001, () => {
-  console.log('Application is running on port 9000')
+  console.log('Application is running on port 3001')
 })

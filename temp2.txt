@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {Card, Input, Button, Table} from 'antd';
 import 'antd/dist/antd.css';
 import {  sum,inv,multiply } from 'mathjs';
+import axios from 'axios';
   
 const InputColor = {
     background: "#ffffff",
@@ -27,6 +28,7 @@ var table = [
         key: "y"
     }
 ];
+var schedule = []
 var x, y, tableinput, answer
 
 class LinearRegression extends Component {
@@ -40,9 +42,10 @@ class LinearRegression extends Component {
         this.state = {
             Points: 0,
             m: 0,
-            showinput: false, 
-            showbutton: false,
+            showinput: false, //table
+            showbutton: false, //sub2
             showAnswer: false,
+            showgraph : false
         }
         this.handleChange = this.handleChange.bind(this);
       
@@ -107,19 +110,15 @@ class LinearRegression extends Component {
 
                 if (i===0 && j===0) {
                     Xmatrix[i][j] = n
-                    console.log(Xmatrix[i][j])
                 }
                 else if (i===0 && j===1){
                     Xmatrix[i][j] = this.sumxpow(x, 1)
-                    console.log(Xmatrix[i][j])
                 }
                 else if (i===1 && j===0){
                     Xmatrix[i][j] = this.sumxpow(x, 1)
-                    console.log(Xmatrix[i][j])
                 }
                 else {
                     Xmatrix[i][j] = this.sumxpow(x, 2)
-                    console.log(Xmatrix[i][j])
                 }
             }
             
@@ -127,7 +126,7 @@ class LinearRegression extends Component {
         Ymatrix[0] = sum(y)
         Ymatrix[1] = this.sumXY(x, y)
         Xmatrix = inv(Xmatrix)
-        answer = JSON.stringify(multiply(Xmatrix, Ymatrix))
+        answer = JSON.stringify(multiply(Xmatrix, Ymatrix)) //arr string
         console.log(answer)
        
         

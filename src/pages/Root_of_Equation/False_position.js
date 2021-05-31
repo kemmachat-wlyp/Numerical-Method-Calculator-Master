@@ -7,11 +7,10 @@ import axios from 'axios';
 const { Content } = Layout;
 
 const InputStyle = {
-    background: "white",
-    color: "#ffa31a",
+    background: "#ffffff",
+    color: "black   ",
     fontWeight: "bold",
-    fontSize: "24px",
-    marginLeft: "40%",
+    fontSize: "24px"
 };
 
 var dataInTable = []
@@ -163,21 +162,22 @@ class False_position extends Component {
                 >
                     <div
                         style={{
-                            width: 500
+                            color: "#ffffff",
+                            background: "#",
                         }}
                     >
-                        <h2 style={{ marginLeft: "40%" }}>f(x)</h2><Input size="large" name="fx" style={InputStyle}></Input>
-                        <h2 style={{ marginLeft: "40%" }}>X<sub>L</sub></h2><Input size="large" name="xl" style={InputStyle}></Input>
-                        <h2 style={{ marginLeft: "40%" }}>X<sub>R</sub></h2><Input size="large" name="xr" style={InputStyle}></Input><br /><br />
+                        <h2>f(x)</h2><Input size="large" name="fx" style={InputStyle} value={this.state.fx}></Input>
+                        <h2>X<sub>L</sub></h2><Input size="large" name="xl" style={InputStyle} value={this.state.xl}></Input>
+                        <h2>X<sub>R</sub></h2><Input size="large" name="xr" style={InputStyle} value={this.state.xr}></Input><br /><br />
                         <Button id="submit_button" onClick={
                             () => this.false_position(parseFloat(this.state.xl), parseFloat(this.state.xr))
                         }
-                            style={{ background: "#ffa31a", color: "black", fontSize: "20px", marginLeft: "40%" }}>Submit <br></br></Button>
+                            style={{ background: "#ffa31a", color: "black", fontSize: "20px"}}>Submit <br></br></Button>
                         <br /><br />
                         <Button id="API" onClick={
                             () => this.API()
                         }
-                            style={{ background: "#ffa31a", color: "black", fontSize: "20px", marginLeft: "40%" }}>API <br></br></Button>
+                            style={{ background: "#ffa31a", color: "black", fontSize: "20px"}}>API <br></br></Button>
                     </div>
 
                     <br /><br />
